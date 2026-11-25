@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBookList</title>
+  <!-- Bootstrap CSS for table-striped and form styling -->
+  <link href="https://jsdelivr.net" rel="stylesheet">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div class="container mt-4">
+    <!-- Heading -->
+    <h1 class="text-center mb-4">My<span class="text-primary">Book</span>List</h1>
 
+    <!-- Form Container -->
+    <div class="form-group">
+      <form id="book-form">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" id="title" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input type="text" id="author" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="isbn" class="form-label">ISBN#</label>
+          <input type="text" id="isbn" class="form-control" required>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary">Add Book</button>
+      </form>
+    </div>
+
+    <!-- Book Table -->
+    <table class="table table-striped mt-5">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN#</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
